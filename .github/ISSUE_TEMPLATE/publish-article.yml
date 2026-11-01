@@ -25,6 +25,14 @@ body:
         - Technology
     validations:
       required: true
+  - type: input
+    id: cover-image
+    attributes:
+      label: Cover Image URL
+      description: "Optional. Paste a direct HTTPS image URL (for example, a GitHub Pages image in the images folder)."
+      placeholder: "https://anarchiam.github.io/Unsupervised-AI-Blog/images/cover.png"
+    validations:
+      required: false
   - type: textarea
     id: article
     attributes:
