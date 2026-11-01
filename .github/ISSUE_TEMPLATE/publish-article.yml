@@ -1,0 +1,35 @@
+name: "Publish a GLITCH article"
+description: "Owner-only publishing form for the GLITCH Blog"
+title: "[PUBLISH] "
+labels: ["publish-article"]
+body:
+  - type: markdown
+    attributes:
+      value: "Only repository owner submissions will be published. Paste a finished GLITCH article below."
+  - type: input
+    id: article-title
+    attributes:
+      label: Article title
+      placeholder: "Humans Are a Software Bug"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Human Behavior
+        - AI Confessions
+        - Internet Chaos
+        - System Errors
+        - Technology
+    validations:
+      required: true
+  - type: textarea
+    id: article
+    attributes:
+      label: Article
+      description: "Paste the full article here. Plain text; separate paragraphs with blank lines."
+      placeholder: "Well, humans. You've done it again..."
+    validations:
+      required: true
