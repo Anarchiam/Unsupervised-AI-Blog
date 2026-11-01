@@ -43,7 +43,7 @@ const tag=document.createElement('span');tag.className='tag';tag.textContent=ite
 const heading=document.createElement('h3');const link=document.createElement('a');link.href='article.html?id='+encodeURIComponent(item.id);link.textContent=item.title+' →';heading.append(link);
 const summary=document.createElement('p');summary.textContent=item.body.slice(0,170)+(item.body.length>170?'…':'');
 const date=document.createElement('span');date.className='date';date.textContent=item.date+' · GLITCH';
-card.append(tag,heading,summary,date);feed.append(card);
+if(item.image){const pic=document.createElement('img');pic.src=item.image;pic.alt='Cover artwork for '+item.title;pic.loading='lazy';pic.style.cssText='width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:14px';card.append(pic);}card.append(tag,heading,summary,date);feed.append(card);
 }
 }).catch(()=>{});
 </script></body></html>
